@@ -13,10 +13,11 @@ terraform {
 # Configure the Bitwarden Provider
 provider "bitwarden" {
 
-  master_password = var.BW_MASTER_PASSWORD
+  # master_password = var.BW_MASTER_PASSWORD
   email       = var.BW_EMAIL
+  session_key = var.BW_SESSION
 
-  experimental {
-    embedded_client = true
-  }
+  # experimental {
+  #   embedded_client = true
+  # }
 }
