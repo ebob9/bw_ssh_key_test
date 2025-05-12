@@ -8,14 +8,26 @@ variable "PROJECT_NAME" {
 #   description = "Bitwarden Master Password"
 #   sensitive   = true
 # }
+#
+# variable "BW_EMAIL" {
+#   type        = string
+#   description = "Bitwarden User Email"
+# }
+#
+# variable "BW_SESSION" {
+#   type        = string
+#   description = "Bitwarden Master Password"
+#   sensitive   = true
+# }
 
-variable "BW_EMAIL" {
-  type        = string
-  description = "Bitwarden User Email"
+variable "AWS_REGION" {
+  type = string
 }
 
-variable "BW_SESSION" {
-  type        = string
-  description = "Bitwarden Master Password"
-  sensitive   = true
+variable "AWS_ACCESS_KEY" {
+  type = string
+}
+
+variable "AWS_SECRET_KEY" {
+  type = string
 }
