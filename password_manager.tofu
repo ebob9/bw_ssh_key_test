@@ -13,5 +13,6 @@ resource "bitwarden_attachment" "ssh_key_entry" {
   depends_on = [
     local_sensitive_file.pem_file
   ]
+  # content_hash = local_sensitive_file.pem_file.content_sha1
   item_id = bitwarden_item_login.login_entry.id
 }
