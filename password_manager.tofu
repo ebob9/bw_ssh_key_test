@@ -9,7 +9,10 @@ resource "bitwarden_item_login" "login_entry" {
 }
 
 resource "bitwarden_attachment" "ssh_key_entry" {
-  file    = local_sensitive_file.pem_file.filename
+  dynamic_file = local_sensitive_file.pem_file.filename
+  content_hash = local_sensitive_file.pem_file.content_sha1
+  # content_hash = "ignore"
+  # content_hash = "force re-upload every run with any invalid hash"
   depends_on = [
     local_sensitive_file.pem_file
   ]
